@@ -1,0 +1,73 @@
+/* Import the Lato font */
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
+
+/* Apply the Lato font to the entire form */
+.container {
+    font-family: 'Lato', Arial, sans-serif;
+    max-width: 600px; /* Increased width */
+    margin: 0 auto;
+    padding: 30px; /* Increased padding */
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #f9f9f9;
+}
+
+/* Title styling */
+.container h2 {
+    text-align: center;
+    margin-bottom: 25px;
+    color: #333;
+    font-weight: 700;
+}
+
+/* Styling for labels */
+.container label {
+    display: block;
+    font-weight: 700;
+    margin-bottom: 5px;
+    color: #555;
+}
+
+/* Styling for input fields */
+.container input[type="text"],
+.container input[type="password"] {
+    width: 100%;
+    padding: 12px; /* Slightly increased padding */
+    margin-bottom: 20px; /* Increased space between fields */
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+/* Change border color on focus */
+.container input[type="text"]:focus,
+.container input[type="password"]:focus {
+    border-color: #2196F3;
+    outline: none;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center; /* Centers buttons horizontally */
+    gap: 20px; /* Adds 20px space between buttons */
+    margin-top: 20px; /* Optional: adds some spacing above */
+}
+
+.submit {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    background-color: #2196F3; /* Blue background */
+    cursor: pointer;
+    font-family: 'Lato', Arial, sans-serif;
+    font-weight: 700;
+    transition: background-color 0.3s;
+}
+
+.submit:hover {
+    background-color: #1b7fd0; /* Darker blue on hover */
+}
