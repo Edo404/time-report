@@ -4,9 +4,9 @@ import React, { useState } from 'react';
 
 function List() {
     const [tasks, setTasks] = useState([
-        { id: 1, text: "Eat", project: "AEP" },
-        { id: 2, text: "Shower", project: "ENI" },
-        { id: 3, text: "Work", project: "Prometeon" }
+        { id: 1, text: "AMS", project: "AEP" },
+        { id: 2, text: "PowerApps", project: "ENI" },
+        { id: 3, text: "SQL", project: "Prometeon" }
     ]);
     const [newTask, setNewTask] = useState("");
 
@@ -50,12 +50,15 @@ function List() {
                     <li key={task.id}>
                         <span className="text">{task.text}</span>
                         <span className="text">{task.project}</span>
-                        <button
-                            className="delete-button"
+                        <i
+                            className="fas fa-trash-alt"
+                            style={{
+                                cursor: 'pointer',
+                                marginLeft: '8px',
+                                color: '#545454'
+                            }}
                             onClick={() => deleteTask(task.id)}
-                        >
-                            Delete
-                        </button>
+                        ></i>
                     </li>
                 ))}
             </ol>

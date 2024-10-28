@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
+import '@fortawesome/fontawesome-free/css/all.min.css';
 
 function Projects() {
     const [tasks, setTasks] = useState([
-        { id: 1, text: "ENI", color: ""},
-        { id: 2, text: "AEP", color: ""},
-        { id: 3, text: "Prometeon", color: ""}
+        { id: 1, text: "ENI", color: "" },
+        { id: 2, text: "AEP", color: "" },
+        { id: 3, text: "Prometeon", color: "" }
     ]);
     const [newTask, setNewTask] = useState("");
 
@@ -15,7 +16,7 @@ function Projects() {
     function addTask() {
         if (newTask.trim() !== "") {
             const newTaskObject = {
-                id: tasks.length > 0 ? tasks[tasks.length - 1].id + 1 : 1, // Unique id for each task
+                id: tasks.length > 0 ? tasks[tasks.length - 1].id + 1 : 1,
                 text: newTask,
                 color: ""
             };
@@ -48,12 +49,15 @@ function Projects() {
                     <li key={task.id}>
                         <span className="text">{task.id}</span>
                         <span className="text">{task.text}</span>
-                        <button
-                            className="delete-button"
+                        <i
+                            className="fas fa-trash-alt"
+                            style={{
+                                cursor: 'pointer',
+                                marginLeft: '8px',
+                                color: '#545454'
+                            }}
                             onClick={() => deleteTask(task.id)}
-                        >
-                            Delete
-                        </button>
+                        ></i>
                     </li>
                 ))}
             </ol>
