@@ -1,12 +1,11 @@
-
-
 import React, { useState } from 'react';
+import './List.css'
 
 function List() {
     const [tasks, setTasks] = useState([
-        { id: 1, text: "AMS", project: "AEP" },
-        { id: 2, text: "PowerApps", project: "ENI" },
-        { id: 3, text: "SQL", project: "Prometeon" }
+        { id: 1, text: "AMS", project: "AEP", hours: 2 },
+        { id: 2, text: "PowerApps", project: "ENI", hours: 3 },
+        { id: 3, text: "SQL", project: "Prometeon", hours: 3 }
     ]);
     const [newTask, setNewTask] = useState("");
 
@@ -19,7 +18,8 @@ function List() {
             const newTaskObject = {
                 id: tasks.length > 0 ? tasks[tasks.length - 1].id + 1 : 1, // Unique id for each task
                 text: newTask,
-                project: ""
+                project: "",
+                hours: 1
             };
             setTasks((t) => [...t, newTaskObject]);
             setNewTask("");
@@ -50,6 +50,7 @@ function List() {
                     <li key={task.id}>
                         <span className="text">{task.text}</span>
                         <span className="text">{task.project}</span>
+                        <span className="text">{task.hours}</span>
                         <i
                             className="fas fa-trash-alt"
                             style={{

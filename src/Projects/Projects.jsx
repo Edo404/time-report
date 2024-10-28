@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import '@fortawesome/fontawesome-free/css/all.min.css';
+import './Projects.css'
 
 function Projects() {
     const [tasks, setTasks] = useState([
