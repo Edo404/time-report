@@ -20,7 +20,7 @@ header {
 }
 
 .navbar {
-    background-color: hsl(0, 0%, 15%);
+    background-color: hsl(0, 0%, 98%);
     font-size: 1em;
     font-family: 'Lato', sans-serif; /* Updated font-family to Lato */
     width: 100%; /* Ensure it covers the full width of the viewport */
@@ -46,7 +46,7 @@ header {
 
 .nav-items li a {
     text-decoration: none;
-    color: hsl(0, 0%, 100%);
+    color: hsl(0, 0%, 33%);
     white-space: nowrap; /* Prevents text from wrapping */
 }
 
@@ -59,8 +59,8 @@ header {
 .hamburger {
     display: none; /* Initially hidden, only visible on mobile */
     cursor: pointer;
-    background-color: hsl(0, 0%, 15%); /* White background */
-    border: 2px solid hsl(0, 0%, 100%); /* Light gray border */
+    background-color: hsl(0, 0%, 98%); /* White background */
+    border: 2px solid hsl(0, 0%, 33%); /* Light gray border */
     border-radius: 5px; /* Rounded corners */
     width: 32px; /* Reduced width for smaller size (20% smaller from 40px) */
     height: 32px; /* Reduced height for smaller size (20% smaller from 40px) */
@@ -76,7 +76,7 @@ header {
 .hamburger-line {
     width: 95%; /* Make lines full width of the hamburger button */
     height: 2px; /* Height of each line (slightly lighter) */
-    background-color: hsl(0, 0%, 100%); /* Lightened color of the lines */
+    background-color: hsl(0, 0%, 33%); /* Lightened color of the lines */
     transition: all 0.3s; /* Smooth transition for transformations */
     margin: 3px 0; /* Add margin for spacing between lines */
 }
@@ -104,7 +104,7 @@ header {
         position: absolute;
         right: 0;
         top: 60px; /* Offset below the fixed navbar */
-        background-color: hsl(0, 0%, 15%);
+        background-color: hsl(0, 0%, 98%);
         width: 100%; /* Ensure menu spans full width on mobile */
         box-sizing: border-box; /* Include padding within the width */
     }
