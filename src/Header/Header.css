@@ -1,0 +1,126 @@
+:root{
+    --bg-color: hsl(207, 90%, 54%);
+    --hover-color: hsl(207, 77%, 46%);
+}
+
+header {
+    width: 100%;
+    position: fixed; /* Ensures the header stays at the top */
+    top: 0;
+    left: 0;
+    z-index: 1000; /* Ensures it stays on top of other elements */
+}
+
+.picture-header{
+    width: 40px;
+    height: 40px;
+    border-radius: 50px;
+    border: 2px solid;
+    border-color: var(--bg-color);
+}
+
+.navbar {
+    background-color: hsl(0, 0%, 15%);
+    font-size: 1em;
+    font-family: 'Lato', sans-serif; /* Updated font-family to Lato */
+    width: 100%; /* Ensure it covers the full width of the viewport */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    box-sizing: border-box; /* Prevents padding from adding to the width */
+}
+
+/* List items are displayed inline */
+.nav-items {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    overflow: hidden; /* Prevents any overflow issues */
+}
+
+.nav-items li {
+    padding: 10px 15px;
+}
+
+.nav-items li a {
+    text-decoration: none;
+    color: hsl(0, 0%, 100%);
+    white-space: nowrap; /* Prevents text from wrapping */
+}
+
+.nav-items li a:hover{
+    color: var(--hover-color);
+    transition: 0.4s;
+}
+
+/* Hamburger button styling */
+.hamburger {
+    display: none; /* Initially hidden, only visible on mobile */
+    cursor: pointer;
+    background-color: hsl(0, 0%, 15%); /* White background */
+    border: 2px solid hsl(0, 0%, 100%); /* Light gray border */
+    border-radius: 5px; /* Rounded corners */
+    width: 32px; /* Reduced width for smaller size (20% smaller from 40px) */
+    height: 32px; /* Reduced height for smaller size (20% smaller from 40px) */
+    display: flex; /* Center the hamburger icon */
+    flex-direction: column; /* Arrange lines in a column */
+    justify-content: center; /* Center lines vertically */
+    align-items: center; /* Center lines horizontally */
+    padding: 0; /* Remove padding to ensure centering */
+    transition: background-color 0.3s; /* Smooth background transition */
+}
+
+/* Lines for the hamburger icon */
+.hamburger-line {
+    width: 95%; /* Make lines full width of the hamburger button */
+    height: 2px; /* Height of each line (slightly lighter) */
+    background-color: hsl(0, 0%, 100%); /* Lightened color of the lines */
+    transition: all 0.3s; /* Smooth transition for transformations */
+    margin: 3px 0; /* Add margin for spacing between lines */
+}
+
+/* Active styling for hamburger button */
+.hamburger.active .line1 {
+    transform: rotate(45deg) translate(5px, 5px); /* Centered rotation for the first line */
+    margin: 2px 0;
+}
+
+.hamburger.active .line2 {
+    opacity: 0; /* Hide the middle line */
+}
+
+.hamburger.active .line3 {
+    transform: rotate(-45deg) translate(5px, -5px); /* Centered rotation for the third line */
+    margin: 2px 0;
+}
+
+/* Mobile responsive styles */
+@media screen and (max-width: 750px) {
+    .nav-items {
+        display: none; /* Hide the menu by default */
+        flex-direction: column; /* Stack items vertically */
+        position: absolute;
+        right: 0;
+        top: 60px; /* Offset below the fixed navbar */
+        background-color: hsl(0, 0%, 15%);
+        width: 100%; /* Ensure menu spans full width on mobile */
+        box-sizing: border-box; /* Include padding within the width */
+    }
+
+    .nav-items.active {
+        display: flex; /* Show menu when active */
+    }
+
+    .hamburger {
+        display: flex; /* Show hamburger icon only on mobile */
+    }
+}
+
+/* Hide the hamburger button on larger screens */
+@media screen and (min-width: 751px) {
+    .hamburger {
+      display: none; /* Hide the hamburger icon */
+    }
+}
