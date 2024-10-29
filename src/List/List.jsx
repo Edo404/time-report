@@ -9,18 +9,13 @@ function List() {
         { id: 3, text: "SQL", project: "Prometeon", hours: 3 }
     ]);
     const [newTask, setNewTask] = useState("");
-    const [visibleForm, setVisibleForm] = useState(false)
 
     function handleInputChange(event) {
         setNewTask(event.target.value);
     }
 
-    function visibilityForm(){
-
-    }
-
     function addTask() {
-        setVisibleForm(true);
+        setVisibleForm(true)
         if (newTask.trim() !== "") {
             const newTaskObject = {
                 id: tasks.length > 0 ? tasks[tasks.length - 1].id + 1 : 1, // Unique id for each task
