@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './List.css'
+import Form from '../Form/Form';
 
 function List() {
     const [tasks, setTasks] = useState([
@@ -8,12 +9,18 @@ function List() {
         { id: 3, text: "SQL", project: "Prometeon", hours: 3 }
     ]);
     const [newTask, setNewTask] = useState("");
+    const [visibleForm, setVisibleForm] = useState(false)
 
     function handleInputChange(event) {
         setNewTask(event.target.value);
     }
 
+    function visibilityForm(){
+
+    }
+
     function addTask() {
+        setVisibleForm(true);
         if (newTask.trim() !== "") {
             const newTaskObject = {
                 id: tasks.length > 0 ? tasks[tasks.length - 1].id + 1 : 1, // Unique id for each task
