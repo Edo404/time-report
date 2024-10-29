@@ -4,6 +4,7 @@ import Login from './Login/Login'
 import Header from './Header/Header'
 import List from './List/List'
 import Projects from './Projects/Projects'
+import Form from './Form/Form'
 
 function App() {
 
@@ -13,6 +14,7 @@ function App() {
       <Header/>
       <List/>
       <Projects/>
+      <Form/>
     </>
   )
 }

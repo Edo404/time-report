@@ -1,0 +1,75 @@
+/* Center the form container */
+    .form-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+    
+    /* Style the form */
+    form {
+        display: grid;
+        gap: 10px;
+        max-width: 300px;
+        padding: 20px;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        background-color: #f9f9f9;
+    }
+    
+    /* Style each label and input field */
+    label {
+        display: flex;
+        flex-direction: column;
+        font-weight: bold;
+        color: #333;
+    }
+    
+    input[type="date"],
+    select,
+    input[type="text"] {
+        padding: 8px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        font-size: 14px;
+        margin-top: 5px;
+    }
+    
+    /* Button styles */
+    button[type="submit"],
+    button[type="button"] {
+        padding: 8px 16px;
+        border: none;
+        border-radius: 4px;
+        font-size: 14px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+    
+    /* Different colors for Submit and Cancel buttons */
+    button[type="submit"] {
+        background-color: #4CAF50;
+        color: #fff;
+    }
+    
+    button[type="button"] {
+        background-color: #f44336;
+        color: #fff;
+    }
+    
+    /* Hover effects for buttons */
+    button[type="submit"]:hover {
+        background-color: #45a049;
+    }
+    
+    button[type="button"]:hover {
+        background-color: #d32f2f;
+    }
+    
+    /* Align buttons horizontally with a gap */
+    .button-container {
+        display: flex;
+        gap: 10px;
+        justify-content: center;
+    }
